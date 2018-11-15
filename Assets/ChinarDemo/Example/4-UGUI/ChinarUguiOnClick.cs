@@ -89,6 +89,7 @@ using UnityEngine.UI;
 
 public class ChinarUguiOnClick : MonoBehaviour
 {
+    private ReactiveProperty<int> testIntProperty = new ReactiveProperty<int>(88);
     /// <summary>
     /// 初始化函数
     /// </summary>
@@ -104,5 +105,7 @@ public class ChinarUguiOnClick : MonoBehaviour
         image.OnBeginDragAsObservable().Subscribe(_ => print("开始拖动"));
         image.OnDragAsObservable().Subscribe(_ => print("正在拖动"));
         image.OnEndDragAsObservable().Subscribe(_ => print("拖动完成"));
+        testIntProperty.SubscribeToText(GameObject.Find("Text Subscribe").GetComponent<Text>());
+
     }
 }

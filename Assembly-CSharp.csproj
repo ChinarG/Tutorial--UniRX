@@ -66,7 +66,10 @@
     <Compile Include="Assets\ChinarDemo\Example\3-First\ChinarFirst.cs" />
     <Compile Include="Assets\ChinarDemo\Example\4-UGUI\ChinarUguiOnClick.cs" />
     <Compile Include="Assets\ChinarDemo\Example\5-ReactiveProperty\ChinarReactiveProperty.cs" />
-    <None Include="Assets\ChinarDemo\Plugins\UniRx\ReadMe.txt" />
+    <Compile Include="Assets\ChinarDemo\Example\6-MVP\ChinarRxMVP.cs" />
+    <Compile Include="Assets\ChinarDemo\Example\7-Merge\ChinarMerge.cs" />
+    <Compile Include="Assets\ChinarDemo\Example\8-Login-Register\ChinarRxLogin.cs" />
+    <Compile Include="Assets\ChinarDemo\Example\8-Login-Register\ChinarRxRegister.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Unity Files/Tutorial--UniRX/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

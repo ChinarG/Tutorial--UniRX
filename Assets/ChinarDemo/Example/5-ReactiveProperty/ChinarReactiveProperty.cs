@@ -84,10 +84,9 @@ using UnityEngine;
 
 #endregion
 
-
 public class ChinarReactiveProperty : MonoBehaviour
 {
-    public ReactiveProperty<int> Age = new ReactiveProperty<int>(0);
+    public ReactiveProperty<int> Age = new ReactiveProperty<int>(0);//动态变量
 
 
     /// <summary>
@@ -102,7 +101,7 @@ public class ChinarReactiveProperty : MonoBehaviour
 
 
 /// <summary>
-/// 其他类族
+/// 其他类
 /// </summary>
 public class OtherClass
 {
