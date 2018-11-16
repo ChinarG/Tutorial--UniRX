@@ -61,6 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChinarDemo\Example\10-Coroutine\ChinarRxCoroutine.cs" />
+    <Compile Include="Assets\ChinarDemo\Example\11-Complete\ChinarRxComplete.cs" />
+    <Compile Include="Assets\ChinarDemo\Example\12-MoreThread\ChinarRxThread.cs" />
+    <Compile Include="Assets\ChinarDemo\Example\13-WWW\ChinarRxWWW.cs" />
+    <Compile Include="Assets\ChinarDemo\Example\14-WWW-Progress\ChinarRxWWWGet.cs" />
     <Compile Include="Assets\ChinarDemo\Example\1-Timer\ChinarTimer.cs" />
     <Compile Include="Assets\ChinarDemo\Example\2-Update\ChinarUpdate.cs" />
     <Compile Include="Assets\ChinarDemo\Example\3-First\ChinarFirst.cs" />
@@ -70,6 +75,7 @@
     <Compile Include="Assets\ChinarDemo\Example\7-Merge\ChinarMerge.cs" />
     <Compile Include="Assets\ChinarDemo\Example\8-Login-Register\ChinarRxLogin.cs" />
     <Compile Include="Assets\ChinarDemo\Example\8-Login-Register\ChinarRxRegister.cs" />
+    <Compile Include="Assets\ChinarDemo\Example\9-Trigger\ChinarRxApi.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Unity Files/Tutorial--UniRX/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

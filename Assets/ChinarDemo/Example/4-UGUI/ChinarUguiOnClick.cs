@@ -7,6 +7,7 @@
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -90,15 +91,17 @@ using UnityEngine.UI;
 public class ChinarUguiOnClick : MonoBehaviour
 {
     private ReactiveProperty<int> testIntProperty = new ReactiveProperty<int>(88);
+
+
     /// <summary>
     /// 初始化函数
     /// </summary>
     void Start()
     {
         //按钮的事件绑定
-        var button = transform.Find("Button").GetComponent<Button>();
-        button.OnClickAsObservable()
-            .Subscribe(_ => print("事件被响应"));
+        transform.Find("Button").GetComponent<Button>().OnClickAsObservable().Subscribe(_ => print("事件被响应"));
+        //经过测试，不添加 add to，绑定的监听函数不会被调用
+        transform.Find("Reload Button").GetComponent<Button>().OnClickAsObservable().Subscribe(_ => { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); });
 
         //图片的事件注册
         var image = transform.Find("Image").GetComponent<Image>();
@@ -106,6 +109,7 @@ public class ChinarUguiOnClick : MonoBehaviour
         image.OnDragAsObservable().Subscribe(_ => print("正在拖动"));
         image.OnEndDragAsObservable().Subscribe(_ => print("拖动完成"));
         testIntProperty.SubscribeToText(GameObject.Find("Text Subscribe").GetComponent<Text>());
-
+        Observable.EveryUpdate().Subscribe(_ => print("Chinar!")).AddTo(this); //如果不添加 this ，那 Observable就是全局的，这个方法在重载场景时不会被释放，会无限叠加
+        this.UpdateAsObservable().Subscribe(_ => print("毋桐"));//写法等同于上边
     }
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 168
-    y: 141
+    x: -26
+    y: 81
     width: 1117
     height: 865
   m_ShowMode: 4
@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 815
-  m_MinSize: {x: 279, y: 71}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -66,8 +66,8 @@ MonoBehaviour:
     y: 345
     width: 232
     height: 470
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 1888
+  controlID: 77
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
     y: 0
     width: 1117
     height: 865
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -165,7 +165,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Chinar-Left
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 1807
+  controlID: 9
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -257,9 +257,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1029
-    y: 216
-    width: 275
+    x: 208
+    y: 130
+    width: 359
     height: 794
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &12
@@ -282,8 +282,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 402
-    y: 190
+    x: 208
+    y: 130
     width: 359
     height: 794
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -316,8 +316,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 168
-    y: 190
+    x: -26
+    y: 130
     width: 230
     height: 324
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -333,7 +333,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/ChinarDemo/Editor
+    - Assets/ChinarDemo/Example/14-WWW-Progress
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -345,7 +345,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f2e80100
     m_LastClickedID: 125170
-    m_ExpandedIDs: ffffffff000000000c2e0000762e0000142f00005e30000066300000923000005235000000ca9a3b
+    m_ExpandedIDs: 00000000fc2d00004c2e0000082f00004e300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -370,21 +370,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 58}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000000c2e0000142f00005e3000002c3a000000ca9a3b
+    m_ExpandedIDs: ffffffff00000000fc2d00006a2e0000082f00004e30000080300000aa64000092660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ChinarRxRegister
-      m_OriginalName: ChinarRxRegister
+      m_Name: ChinarProgress
+      m_OriginalName: ChinarProgress
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 15578
+      m_UserData: 26260
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -448,9 +448,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1308
-    y: 216
-    width: 604
+    x: 571
+    y: 130
+    width: 520
     height: 794
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
@@ -463,8 +463,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -302
-    m_HBaseRangeMax: 302
+    m_HBaseRangeMin: -260
+    m_HBaseRangeMax: 260
     m_VBaseRangeMin: -388.5
     m_VBaseRangeMax: 388.5
     m_HAllowExceedBaseRangeMin: 1
@@ -484,25 +484,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 604
+      width: 520
       height: 777
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 302, y: 388.5}
+    m_Translation: {x: 260, y: 388.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -302
+      x: -260
       y: -388.5
-      width: 604
+      width: 520
       height: 777
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 604, y: 794}
+  m_LastWindowPixelSize: {x: 520, y: 794}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -527,8 +527,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 765
-    y: 190
+    x: 571
+    y: 130
     width: 520
     height: 794
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -538,9 +538,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 509.09906, y: 362.59656, z: -4}
+    m_Target: {x: 292.30972, y: 359.6469, z: -4}
     speed: 2
-    m_Value: {x: 509.09906, y: 362.59656, z: -4}
+    m_Value: {x: 292.30972, y: 359.6469, z: -4}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -606,16 +606,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 168
-    y: 535
+    x: -26
+    y: 475
     width: 230
     height: 449
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 3c27e2fff8abfdffa6b9fdff0a90feff3891fefffa26ffff2828ffff1631ffff2c31fffffa55ffff00000000
+    m_SelectedIDs: 0e3dfeff
+    m_LastClickedID: -115442
+    m_ExpandedIDs: 1201feffc421feff0e3dfeff5642feff7a43feffc866feff209dfeff8ebffeff9ec0feff98ebfeff1c47ffffe248ffff349cffff90d7ffffa6d9ffff8adaffff12dbffff6adfffffcceaffff8cf0ffffe4fbffff00000000e8340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -634,7 +634,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 3}
     m_SearchString: 
   m_ExpandedScenes:
-  - ChinarLogin
+  - ChinarProgress
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0

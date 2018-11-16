@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ChinarDemo/Example/8-Login-Register/ChinarLogin.unity
+- path: Assets/ChinarDemo/Example/14-WWW-Progress/ChinarProgress.unity
   isLoaded: 1
   isActive: 1
