@@ -1,5 +1,5 @@
 // ========================================================
-// 描述：
+// 描述：动态变量
 // 作者：Chinar 
 // 创建时间：2018-11-14 17:26:07
 // 版 本：1.0
@@ -96,6 +96,7 @@ public class ChinarReactiveProperty : MonoBehaviour
     {
         Age.Subscribe(age => { print(age); });
         Age.Value = 88;
+        OtherClass o=new OtherClass();
     }
 }
 

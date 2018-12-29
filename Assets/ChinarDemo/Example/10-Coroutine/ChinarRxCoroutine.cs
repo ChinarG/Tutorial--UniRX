@@ -95,19 +95,15 @@ public class ChinarRxCoroutine : MonoBehaviour
     /// </summary>
     void Start()
     {
-
-        // 第一种：协程
-        Observable.FromCoroutine(Test);//协程转 Observable
-
-        //第二种：WhenAll
+        //第一种：等待协程都执行完毕
         var streamA = Observable.FromCoroutine(A);
         var streamB = Observable.FromCoroutine(B);
         Observable.WhenAll(streamA, streamB).Subscribe(_ => print("WenAll执行成功！"));
 
-        //第三种：所有操作执行一次后，执行以下订阅
-        var event1 = this.UpdateAsObservable().Where(_=>Input.GetMouseButtonDown(0)).First();
-        var event2 = this.UpdateAsObservable().Where(_=>Input.GetMouseButtonDown(1)).First();
-        Observable.WhenAll(event1, event2).Subscribe(_=>print("左右键执行一次后，执行操作！"));
+        //第二种：所有操作执行一次后，执行以下订阅
+        var event1 = this.UpdateAsObservable().Where(_ => Input.GetMouseButtonDown(0)).First();
+        var event2 = this.UpdateAsObservable().Where(_ => Input.GetMouseButtonDown(1)).First();
+        Observable.WhenAll(event1, event2).Subscribe(_ => print("左右键执行一次后，执行操作！"));
     }
 
 
@@ -117,15 +113,17 @@ public class ChinarRxCoroutine : MonoBehaviour
         print("A");
     }
 
+
     IEnumerator B()
     {
         yield return new WaitForSeconds(2);
         print("B");
     }
 
-    private IEnumerator Test()
+
+    private IEnumerator TestIEnumerator()
     {
-        yield return Observable.Timer(TimeSpan.FromSeconds(1)).ToYieldInstruction();// 转 指令、
-        print("Chinar Success！");
+        yield return Observable.Timer(TimeSpan.FromSeconds(1)).ToYieldInstruction(); // 转 指令、
+        print("Chinar Test-Func");
     }
 }

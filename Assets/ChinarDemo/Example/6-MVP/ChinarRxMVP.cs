@@ -1,5 +1,5 @@
 // ========================================================
-// 描述：
+// 描述：6-MVP
 // 作者：Chinar 
 // 创建时间：2018-11-15 15:14:00
 // 版 本：1.0
@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 
 #region Chinar Icon
+
 /*
 ##########################################################################################################################$
 ##########################################################################################################################$
@@ -81,6 +82,7 @@ using UnityEngine.UI;
 ##########################################################################################################################$
 ##########################################################################################################################$
 */
+
 #endregion
 
 
@@ -90,36 +92,34 @@ using UnityEngine.UI;
 /// </summary>
 public class ChinarRxMVP : MonoBehaviour
 {
-   [SerializeField]EnemyModel enemy=new EnemyModel(188);
+    [SerializeField] private EnemyModel enemy = new EnemyModel(188);
+
+
     /// <summary>
     /// 初始化函数
     /// </summary>
     void Start()
     {
         var button = transform.Find("Button").GetComponent<Button>();
-        var HpText = transform.Find("Text").GetComponent<Text>();
-        button.OnClickAsObservable().Subscribe(_ => { enemy.HP.Value -= 99;});
-
-        enemy.HP.SubscribeToText(HpText);
+        button.OnClickAsObservable().Subscribe(_ => { enemy.Hp.Value -= 99; });
+        enemy.Hp.SubscribeToText(transform.Find("Text").GetComponent<Text>());
         enemy.IsDead.Where(isDead => isDead).Select(isDead => !isDead).SubscribeToInteractable(button);
-
     }
-
-
-   
 }
+
 
 /// <summary>
 /// 敌人模型
 /// </summary>
 public class EnemyModel
 {
-    public ReactiveProperty<long> HP;
-    public IReadOnlyReactiveProperty<bool> IsDead;
+    public ReactiveProperty<long>          Hp;     //血量 :两个动态
+    public IReadOnlyReactiveProperty<bool> IsDead; //是否死亡
+
 
     public EnemyModel(long initialHp)
     {
-        HP = new ReactiveProperty<long>(initialHp);
-        IsDead = HP.Select(hp => hp < 0).ToReactiveProperty();
+        Hp     = new ReactiveProperty<long>(initialHp);
+        IsDead = Hp.Select(hp => hp < 0).ToReactiveProperty();
     }
 }

@@ -6,6 +6,7 @@
 // ========================================================
 using System;
 using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -97,7 +98,7 @@ public class ChinarMerge : MonoBehaviour
         //var left  = Observable.EveryUpdate().Where(_ => Input.GetMouseButtonDown(0));
         //var right = Observable.EveryUpdate().Where(_ => Input.GetMouseButtonDown(1));
         //left.Merge(right).Subscribe(_ => print("按钮"));
-        var stream1 = transform.Find("Button1").GetComponent<Button>().OnClickAsObservable().Select(_=>"A");
+        var stream1 = transform.Find("Button1").GetComponent<Button>().OnClickAsObservable().Select(_ => "A");
         var stream2 = transform.Find("Button2").GetComponent<Button>().OnClickAsObservable().Select(_ => "B");
         var stream3 = transform.Find("Button3").GetComponent<Button>().OnClickAsObservable().Select(_ => "C");
 
@@ -108,6 +109,5 @@ public class ChinarMerge : MonoBehaviour
             Observable.Timer(TimeSpan.FromSeconds(1)).Subscribe(__ => { gameObject.SetActive(false); });
             Observable.Timer(TimeSpan.FromSeconds(2)).Subscribe(__ => { gameObject.SetActive(true); });
         });
-
     }
 }

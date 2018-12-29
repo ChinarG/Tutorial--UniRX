@@ -1,10 +1,11 @@
 // ========================================================
-// 描述：
+// 描述：只执行一次
 // 作者：Chinar 
 // 创建时间：2018-11-14 16:57:38
 // 版 本：1.0
 // ========================================================
 using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
 
@@ -87,14 +88,22 @@ using UnityEngine;
 
 public class ChinarFirst : MonoBehaviour
 {
-    /// <summary>
-    /// 初始化函数
-    /// </summary>
     void Start()
     {
-        Observable.EveryUpdate()                   //发布
-            .First(_ => Input.GetMouseButtonUp(0)) //过程
-            .Subscribe(_ => print("First！"))       //订阅
-            .AddTo(this);                          //绑定生命周期
+        Observable.EveryUpdate()                   //观察
+            .First(_ => Input.GetMouseButtonUp(0)) //条件
+            .Subscribe(_ => print("只执行一次"))        //订阅
+            .AddTo(this);                          //给事件流添加声明周期(PS：何时消失)
+    }
+
+
+    /// <summary>
+    /// Addto:第二种写法
+    /// </summary>
+    private void Second()
+    {
+        //如果不添加 this ，那 Observable就是全局的，这个方法在重载场景时不会被释放，会无限叠加
+        Observable.EveryUpdate().Subscribe(_ => print("Chinar")).AddTo(this);
+        this.UpdateAsObservable().Subscribe(_ => print("Chinar")); //写法等同于上边
     }
 }

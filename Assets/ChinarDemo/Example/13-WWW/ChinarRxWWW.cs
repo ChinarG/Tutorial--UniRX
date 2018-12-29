@@ -1,9 +1,11 @@
 // ========================================================
-// 描述：WWW请求
+// 描述：13-WWW请求
 // 作者：Chinar 
 // 创建时间：2018-11-16 17:10:46
 // 版 本：1.0
 // ========================================================
+using System.Collections.Generic;
+using System.IO;
 using UniRx;
 using UnityEngine;
 
@@ -91,6 +93,11 @@ public class ChinarRxWWW : MonoBehaviour
     /// 初始化函数
     /// </summary>
     void Start()
+    {
+    }
+
+
+    void Rx()
     {
         ObservableWWW.Get("http://chinar.xin").Subscribe(_ => print(_), e => print(e));
         //第一个 print是请求正常信息，第二个是打印错误信息

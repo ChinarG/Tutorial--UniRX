@@ -93,14 +93,12 @@ public class ChinarRxWWWGet : MonoBehaviour
     /// </summary>
     void Start()
     {
-        var progressObservable = new ScheduledNotifier<float>(); //进度条
-        ObservableWWW.GetAndGetBytes("http://www.chinar.xin/TestUpdate/granulesprite.unity3d", progress: progressObservable)
-            .Subscribe(bytes => { }); //下载完成，做储存
-        progressObservable.Subscribe(progressFloat =>
-        {
-            GameObject.Find("Slider").GetComponent<Slider>().value = progressFloat;
-            print("下载进度：" + progressFloat);
-        });
-        progressObservable.SubscribeToText(GameObject.Find("ProgressText").GetComponent<Text>());
+        var slider           = GameObject.Find("Slider").GetComponent<Slider>();     //滑动器
+        var progressText     = GameObject.Find("ProgressText").GetComponent<Text>(); //进度条文本
+        var progressNotifier = new ScheduledNotifier<float>();                       //RX 预定通知 float
+        //尚未拥有服务器的，可以看我的教程购买；也可，直接使用以下地址资源进行测试，Chinar会为大家永久预留！
+        ObservableWWW.GetAndGetBytes("http://www.chinar.xin/chinarweb/Assets/Test/UniRx/ChinarTestAssets.rar", progress: progressNotifier).Subscribe(bytes => { }); //下载完成，做储存
+        progressNotifier.Subscribe(progressFloat => { slider.value = progressFloat; });                                                                             //更新进度
+        progressNotifier.SubscribeToText(progressText);                                                                                                             //进度值显示在 progressText
     }
 }

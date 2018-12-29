@@ -112,7 +112,7 @@ public class ChinarRxRegister : MonoBehaviour
     {
         //结束编辑时，提交
         userInputField.OnEndEditAsObservable().Subscribe(_ => passInputField.Select());          //按下回车，直接切换到密码输入框
-        passInputField.OnEndEditAsObservable().Subscribe(_ => pass2InputField.Select());         //回车后，直接登录
+        passInputField.OnEndEditAsObservable().Subscribe(_ => pass2InputField.Select());         //密码确认
         pass2InputField.OnEndEditAsObservable().Subscribe(_ => registerButton.onClick.Invoke()); //回车后，直接登录
         backButton.OnClickAsObservable().Subscribe(_ => print("返回"));
         registerButton.OnClickAsObservable().Subscribe(_ => print("注册"));
