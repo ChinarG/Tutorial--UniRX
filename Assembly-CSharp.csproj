@@ -86,6 +86,7 @@
     <Compile Include="Assets\ChinarDemo\Example-Operational Character\04-Distinct\Chinar_Distinct.cs" />
     <Compile Include="Assets\ChinarDemo\Example-Operational Character\05-Last\Chinar_Last.cs" />
     <Compile Include="Assets\ChinarDemo\Example-Operational Character\06-SelectMany\Chinar_SelectMany.cs" />
+    <Compile Include="Assets\ChinarDemo\Example-Operational Character\07-Take\Chinar_Take.cs" />
     <Compile Include="Assets\ChinarTest.cs" />
     <None Include="Assets\StreamingAssets\Administrative staff.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
