@@ -114,6 +114,7 @@ public class OtherClass
     /// </summary>
     public void Init()
     {
+    	Debug.Log(111);
         chinarRp.Age.Subscribe(age => { Debug.Log(age); });
     }
 }

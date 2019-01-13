@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "Assets/ChinarDemo/Example/17-\u5F02\u6B65\u52A0\u8F7D/Chinar\u5F02\u6B65\u52A0\u8F7D.unity"
+- path: Assets/ChinarDemo/Example-Operational Character/06-SelectMany/06-SelectMany.unity
   isLoaded: 1
   isActive: 1
